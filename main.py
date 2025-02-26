@@ -19,6 +19,7 @@ plt.show()
 """
 
 #a 2-dimensional plot:
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import AgglomerativeClustering
@@ -28,8 +29,10 @@ y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
 
 data = list(zip(x, y))
 
-hierarchical_cluster = AgglomerativeClustering(n_clusters=2, affinity='euclidean', linkage='ward')
+# affinity সরিয়ে ফেলা হয়েছে
+hierarchical_cluster = AgglomerativeClustering(n_clusters=2, linkage='ward')
+
 labels = hierarchical_cluster.fit_predict(data)
 
-plt.scatter(x, y, c=labels)
+plt.scatter(x, y, c=labels, cmap='viridis')  # সুন্দর কালার ম্যাপ যোগ করা হয়েছে
 plt.show()

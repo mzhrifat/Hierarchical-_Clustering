@@ -36,3 +36,8 @@ labels = hierarchical_cluster.fit_predict(data)
 
 plt.scatter(x, y, c=labels, cmap='viridis')  # সুন্দর কালার ম্যাপ যোগ করা হয়েছে
 plt.show()
+
+
+
+
+

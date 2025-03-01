@@ -12,7 +12,7 @@ import pandas as pd
 
 cars=pd.read_csv('C:\\Machine-Leraning\\Hierarchical_Clustering\\data1.csv')
 print(ohe_cars.to_string())
-"""
+
 
 #predict co2
 
@@ -39,3 +39,13 @@ test_data = np.array([[2300, 1300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]])
 predictedCO2 = regr.predict(test_data)
 
 print(predictedCO2)
+"""
+#Dummifying
+
+import pandas as pd
+
+colors=pd.DataFrame({'color':['blue','red','green']})
+dummies=pd.get_dummies(colors,drop_first=True)
+dummies['color']=colors['color']
+
+print(dummies)
